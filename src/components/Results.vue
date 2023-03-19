@@ -1,6 +1,9 @@
 <template>
-  <p>Rection Time - {{ score }} ms</p>
-  <p class="rank">{{ rank }}</p>
+  <p class="btn dotted thick">
+    Rection Time - {{ score }} ms
+    <br />
+    <span class="rank">{{ rank }}</span>
+  </p>
 </template>
 
 <script>
@@ -23,10 +26,36 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "../assets/scss/_variables.scss";
+
 .rank {
-  font-size: 1.4em;
-  color: #0faf87;
+  font-size: 2rem;
+  color: $gray;
   font-weight: bold;
+}
+
+.btn {
+  align-self: center;
+  background: transparent;
+  padding: 1rem 1rem;
+  transition: all 0.5s ease;
+  color: $gray;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  outline: none;
+  box-shadow: 20px 38px 34px -26px hsla(0, 0%, 0%, 0.2);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+
+  &.dotted.thick {
+    border: dotted 7px #41403e;
+  }
+}
+
+p {
+  font-size: 2.5rem;
+  color: $gray;
+  margin: 4rem auto;
+  max-width: 30rem;
 }
 </style>

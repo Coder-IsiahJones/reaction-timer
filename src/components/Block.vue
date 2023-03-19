@@ -33,14 +33,17 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "../assets/scss/_variables.scss";
+
 .block {
   width: 400px;
   border-radius: 20px;
-  background: #0faf87;
-  color: #fff;
+  background: $gray;
+  color: $white;
   text-align: center;
   padding: 100px 0;
-  margin: 40px auto;
+  margin: 6rem auto;
+  font-size: 4rem;
 }
 </style>
